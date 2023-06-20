@@ -2,7 +2,7 @@
 let a={
     firstName:"Esha",
     lastName:"Patel",
-    city:"Surat",
+    city:"Mumbai",
     fullName:function(){
         return this.firstName + " " + this.lastName;
     }

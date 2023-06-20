@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=Project">
+    <title>Project</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <p></p>
+    <h2></h2>
+    <h3></h3>
+    <h4>HELLO</h4>
+    <h4>FRIEND</h4>
+  
+        <button type="button" onclick="change()">Color Change</button>
+ 
+        <button type="button" onclick="changes()">Color Change</button><br><br>
+        <h5>At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.</h5>
+        <button type="button" onclick="nav1()">Lower Case</button>
+ 
+        <button type="button" onclick="nav2()">Upeer Case</button><br><br>
+ 
+</body>
+
+<script>
+    let b=document.querySelector('h1');
+    b.innerHTML="Hello Everyone"
+
+    let c=document.querySelector('p');
+    c.innerHTML ="Good Morning!"
+    c.style.backgroundColor = 'yellow';
+
+    let d=document.querySelector('h2');
+    d.innerHTML ="Text Color Change"
+    d.style.color = 'blue';
+
+    let e=document.querySelector('h3');
+    e.innerHTML ="Text Color Change!"
+    e.style.color = 'brown';
+
+    let f=document.querySelectorAll('h4');
+    for(let i=0;i<f.length;i++){
+       f[i].innerHTML="Hello Friends!"
+    }
+    
+    let g=document.querySelector('body');
+    g.style.backgroundColor="lightpink";
+
+   
+    let change = function(){
+       let h=document.querySelector('h4');
+       h.style.color='green';
+       
+    }
+
+    let changes = function(){
+       let h=document.querySelector('h4');
+       h.style.color='yellow';
+       
+    }
+
+    let nav1 = function(){
+       let h=document.querySelector('h5');
+       h.style.textTransform='lowercase';
+       
+    }
+
+    let nav2 = function(){
+       let h=document.querySelector('h5');
+       h.style.textTransform='uppercase';
+       
+    }
+
+   
+</script>
+</html>
