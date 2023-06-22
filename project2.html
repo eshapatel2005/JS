@@ -8,16 +8,26 @@
 <body>
     <p>Hello Coders</p>
     <h1>Good Morning Everyone</h1>
-    <p class="coder">Welcome Friends</p>
-    <h2 class="test">Wlcome Coders </h2>
+   
+    <h2>Welcome Coders </h2><br>
+
+    <button type="button" onclick="change()">Color Change</button>
+   <button type="button" onclick="changes()">Color Change</button>
 </body>
 
 <script>
-  //Updateing And Chnaging Contant
 
-  let content = document.querySelector('.test');
-  content.innerHTML ="My Name Is Esha"
+  //text color change
+ let change = function(){
+       let h=document.querySelector('h1');
+       h.style.color='red';
+       
+    }
 
-  console.log(content.innerHTML);
+    let changes = function(){
+       let h=document.querySelector('h2');
+       h.style.color='blue';
+       
+    }
 </script>
 </html>

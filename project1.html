@@ -148,8 +148,30 @@
    localStorage.setItem('Name', "Esha");
    localStorage.setItem('City', 'Surat')
    console.log(localStorage);
-
+   
+   //Remove item form LocalStorage
    localStorage.removeItem('passion');
    localStorage.removeItem('age');
+
+   //get item form LocalStorage
+   localStorage.setItem('city','surat');
+   console.log(localStorage.getItem('city'));
+   
+   //aray of object add in localStorage
+   let vahicles = [
+    {company:"Honda",model:"2009"},
+    {company:"BMW",model:"2010:"}
+   ]
+
+   let stringOfVahicles = JSON.stringify(vahicles);
+   console.log(stringOfVahicles);
+
+   localStorage.setItem("vahicles",stringOfVahicles);
+
+   //Get stored item form LocalStorage
+
+  let storeData = localStorage.getItem('vehicles');
+  let objectFormate = JSON.parse(storeData)
+  console.log(objectFormate);
 </script>
 </html>
