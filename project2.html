@@ -6,28 +6,26 @@
     <title>Project 2</title>
 </head>
 <body>
-    <p>Hello Coders</p>
-    <h1>Good Morning Everyone</h1>
-   
-    <h2>Welcome Coders </h2><br>
+  <h4>A Web Developer is a professional who is responsible for the design and construction of websites.</h4>
+  <button type="button" onclick="nav1()">Lower Case</button>
+  <button type="button" onclick="nav2()">Upper Case</button><br><br>
 
-    <button type="button" onclick="change()">Color Change</button>
-   <button type="button" onclick="changes()">Color Change</button>
+
 </body>
 
 <script>
 
-  //text color change
- let change = function(){
-       let h=document.querySelector('h1');
-       h.style.color='red';
+//textTransform 
+let nav1 = function(){
+       let h=document.querySelector('h4');
+       h.style.textTransform='lowercase';
        
     }
 
-    let changes = function(){
-       let h=document.querySelector('h2');
-       h.style.color='blue';
+   let nav2 = function(){
+      let h=document.querySelector('h4');
+      h.style.textTransform='uppercase';
        
-    }
+   }
 </script>
 </html>

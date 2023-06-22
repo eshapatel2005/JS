@@ -173,5 +173,36 @@
   let storeData = localStorage.getItem('vehicles');
   let objectFormate = JSON.parse(storeData)
   console.log(objectFormate);
+
+  
+
+  //array of object add in localStorage
+  let students=[
+   {NAME:"ESHA",CITY:"SURAT"},
+   {NAME:"AVI",CITY:"VADODARA"}
+  ]
+
+  let stringofStudents=JSON.stringify(students);
+  console.log(stringofStudents);
+
+  localStorage.setItem("students",stringofStudents);
+
+  //get stored item form LocalStorage
+
+  let storeData1=localStorage.getItem('students');
+  let objectFormate1=JSON.parse(storeData1)
+  console.log(objectFormate1);
+
+  //object create
+  let car=function(color,model){
+   //properties
+   this.color=color;
+   this.model=model;
+  }
+
+  let result=new car("white","2020")
+  let result1=new car("grey","2023")
+  console.log(result,result1);
+
 </script>
 </html>
