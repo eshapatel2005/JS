@@ -6,26 +6,28 @@
     <title>Project 2</title>
 </head>
 <body>
-  <h4>A Web Developer is a professional who is responsible for the design and construction of websites.</h4>
-  <button type="button" onclick="nav1()">Lower Case</button>
-  <button type="button" onclick="nav2()">Upper Case</button><br><br>
+  <p>Hello Coders</p>
+<h1>Wlcome Coders Dost Family</h1>
+<p class="coder">Welcome Friends</p>
+<h2 class="main">Wlcome Coders Dost Family</h2>
+<a href="https://www.innovate369.com/">Innovate369</a>
+<button type="button" onclick="changes()">Chanage color</button>
 
 
 </body>
 
 <script>
 
-//textTransform s
-let nav1 = function(){
-       let h=document.querySelector('h4');
-       h.style.textTransform='lowercase';
-       
-    }
+//Add, Remove and Replace Class of element
+let heading = document.querySelector('h1');
 
-   let nav2 = function(){
-      let h=document.querySelector('h4');
-      h.style.textTransform='uppercase';
-       
-   }
+//Add the class
+heading.classList.add('newClass');
+
+//Remove the class
+heading.classList.remove('newClass');
+
+//Replace the Class
+heading.classList.replace('main','newClass');
 </script>
 </html>
