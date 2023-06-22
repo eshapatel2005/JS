@@ -6,28 +6,26 @@
     <title>Project 2</title>
 </head>
 <body>
-  <p>Hello Coders</p>
-<h1>Wlcome Coders Dost Family</h1>
-<p class="coder">Welcome Friends</p>
-<h2 class="main">Wlcome Coders Dost Family</h2>
-<a href="https://www.innovate369.com/">Innovate369</a>
-<button type="button" onclick="changes()">Chanage color</button>
+  <ul>
+    <li>Eat</li>
+    <li>Sleep</li>
+    <li>Code</li>
+    <li>Repeat</li>
+  </ul>
 
 
 </body>
 
 <script>
+  let elements = document.querySelectorAll('li');
+  console.log(elements)
 
-//Add, Remove and Replace Class of element
-let heading = document.querySelector('h1');
+  elements.forEach(function(element){
+    element.addEventListener('click', e=>{
+        console.log(e.target)
+        e.target.style.textDecoration="line-through"
+    })
+  })
 
-//Add the class
-heading.classList.add('newClass');
-
-//Remove the class
-heading.classList.remove('newClass');
-
-//Replace the Class
-heading.classList.replace('main','newClass');
 </script>
 </html>
