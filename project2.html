@@ -6,26 +6,24 @@
     <title>Project 2</title>
 </head>
 <body>
-  <ul>
-    <li>Eat</li>
-    <li>Sleep</li>
-    <li>Code</li>
-    <li>Repeat</li>
-  </ul>
-
+  <textarea class="buety" style="width: 550px;height: 300px;"></textarea></body><br>
+  <button type="button" onclick="lower()">Lower</button>
+  <button type="button" onclick="upper()">Upper</button>
 
 </body>
 
 <script>
-  let elements = document.querySelectorAll('li');
-  console.log(elements)
+ let buety = document.querySelector(".buety");
 
-  elements.forEach(function(element){
-    element.addEventListener('click', e=>{
-        console.log(e.target)
-        e.target.style.textDecoration="line-through"
-    })
-  })
+let lower = function(){
+    buety.value = buety.value.toLowerCase();
+    // buety.innerHTML=buety.innerHTML.toLowerCase();
+}
+
+let upper = function(){
+    // buety.innerHTML=buety.innerHTML.toUpperCase();
+    buety.value = buety.value.toUpperCase();
+}
 
 </script>
 </html>
