@@ -204,5 +204,72 @@
   let result1=new car("grey","2023")
   console.log(result,result1);
 
+  //class
+  //add 5 students details
+  class students1{
+   constructor(name,city,age){
+      this.name=name;
+      this.city=city;
+      this.age=age;
+   }
+   get discription(){
+      return `student name is :${this.name} and city is ${this.city}`;
+   }
+  }
+  let students2=new students1("ESHA","SURAT","19");
+  let students3=new students1("AVI","SURAT","12");
+  console.log(students2);
+  console.log(students3)
+  console.log(students2.discription)
+
+  //create class
+
+class Car{
+    constructor(color,model){
+        this.color = color;
+        this.model = model;
+    }
+    startEngin(){
+        console.log("This is strat engin method of Car class");
+    }
+    get startEngine(){
+        console.log("This is start engin method of Car class using get");
+    }
+
+    set changeColor(color){
+        console.log(this.color = color)
+    }
+}
+
+let honda = new Car("red", "2022");
+console.log(honda)
+honda.startEngine;
+honda.changeColor= "Yellow";
+console.log(honda);
+
+//static method (can never inhritated to all object)
+Car.breakMethod = function(){
+    console.log("This is break method of car class")
+}
+
+let honda1 = new Car("red", 2023);
+honda1.startEngin();
+Car.breakMethod();
+
+
+//Parent Class
+
+class Car1{
+    constructor(color,model){
+        this.color = color;
+        this.model = model;
+    }
+    startEngin(){
+        console.log("This is strat engin method of Car class");
+    }
+}
+
+
+
 </script>
 </html>
