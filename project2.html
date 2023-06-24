@@ -6,24 +6,14 @@
     <title>Project 2</title>
 </head>
 <body>
-  <textarea class="buety" style="width: 550px;height: 300px;"></textarea></body><br>
-  <button type="button" onclick="lower()">Lower</button>
-  <button type="button" onclick="upper()">Upper</button>
-
+  <h1>esha</h1>
 </body>
 
 <script>
- let buety = document.querySelector(".buety");
 
-let lower = function(){
-    buety.value = buety.value.toLowerCase();
-    // buety.innerHTML=buety.innerHTML.toLowerCase();
-}
-
-let upper = function(){
-    // buety.innerHTML=buety.innerHTML.toUpperCase();
-    buety.value = buety.value.toUpperCase();
-}
-
+    //local data store
+   localStorage.setItem('passion', "Programming");
+   localStorage.setItem('age', 24)
+   console.log(localStorage);
 </script>
 </html>
