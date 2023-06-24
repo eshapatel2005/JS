@@ -10,30 +10,15 @@
 </body>
 
 <script>
-   //Get item form LocalStorage
+  let car = function(color,model){
+    //properties
+    this.color = color;
+    this.model = model;
+}
 
-localStorage.setItem('City', 'Vadodara');
-console.log(localStorage.getItem('City'));
-
-//Remove item form LocalStorage
-localStorage.removeItem('Name');
-
-//aray of object add in localStorage
-
-let vahicles = [
-    {company:"honda",model:"2009"},
-    {company:"BMW",model:"2010:"}
-]
-let stringOfVahicles = JSON.stringify(vahicles);
-console.log(stringOfVahicles);
-
-localStorage.setItem("vahicles",stringOfVahicles);
-
-//Get stored item form LocalStorage
-
-let storeData = localStorage.getItem('vehicles');
-let objectFormate = JSON.parse(storeData)
-console.log(objectFormate);
+let result = new car("black","2023");
+let instance = new car("yellow","2025")
+console.log(result,instance);
     
   
 </script>
