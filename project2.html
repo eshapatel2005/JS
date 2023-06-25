@@ -10,22 +10,13 @@
 </body>
 
 <script>
-  //add 5 student deatils 
-class Student{
-    constructor(name,city,age) {
-        this.name = name;
-        this.city = city;
-        this.age = age;
-
-    }
+ //static method (can never inhritated to all objects)
+Car.breakMethod = function(){
+    console.log("This is brack method of Car class")
 }
-get description(){
-        return `Student ${this.name} has live in ${this.city} and his age is ${this.age}`
-    }
 
-let student1 = new Student("Avi","Surat","12");
-let student2 = new Student("Esha","Surat","19");
-console.log(student1);
-console.log(student2);
+let honda = new Car("red", 2023);
+honda.startEngin();
+Car.breakMethod();
 </script>
 </html>
