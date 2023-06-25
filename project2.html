@@ -10,47 +10,18 @@
 </body>
 
 <script>
-  //create class
-  class Car{
+  //add 5 student deatils 
+class Student{
+    constructor(name,city,age) {
+        this.name = name;
+        this.city = city;
+        this.age = age;
 
-constructor(color,model){
-
-    this.color = color;
-
-    this.model = model;
-
+    }
 }
-
-startEngin(){
-
-    console.log("This is strat engin method of Car class");
-
-}
-
-get _startEngine(){
-
-    console.log("This is strat engin method of Car class using get");
-
-}
-
-set changeColor(color){
-
-    console.log(this.color = color)
-
-}
-
-}
-
-let honda = new Car("red", "green");
-
-console.log(honda)
-
-honda.startEngin();
-
-honda.changeColor= "Yellow";
-
-console.log(honda);
-    
-  
+let student1 = new Student("Avi","Surat","12");
+let student2 = new Student("Esha","Surat","19");
+console.log(student1);
+console.log(student2);
 </script>
 </html>
