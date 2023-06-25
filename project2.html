@@ -10,15 +10,46 @@
 </body>
 
 <script>
-  let car = function(color,model){
-    //properties
+  //create class
+  class Car{
+
+constructor(color,model){
+
     this.color = color;
+
     this.model = model;
+
 }
 
-let result = new car("black","2023");
-let instance = new car("yellow","2025")
-console.log(result,instance);
+startEngin(){
+
+    console.log("This is strat engin method of Car class");
+
+}
+
+get _startEngine(){
+
+    console.log("This is strat engin method of Car class using get");
+
+}
+
+set changeColor(color){
+
+    console.log(this.color = color)
+
+}
+
+}
+
+let honda = new Car("red", "green");
+
+console.log(honda)
+
+honda.startEngin();
+
+honda.changeColor= "Yellow";
+
+console.log(honda);
     
   
 </script>
