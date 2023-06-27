@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+</head>
+<body>
+    <h2>Meeting Schedule</h2>
+    <form action="" class="sign-up-Form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+      <lable>Name:</lable><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+      <input type="text" name="username" id="username" ><br><br>
+
+      <lable>Time:</lable>
+      <input type="time" name="usertime" id="usertime"><br><br>
+
+      <lable>City:</lable>
+      <input type="text" name="usercity" id="usercity" ><br><br>
+
+      <lable>Phone Number:</lable>
+      <input type="tel" name="usernumber" id="usernumber" placeholder="123-45-678-23" ><br><br>
+
+      <label>Choose a Person from this list:
+        <input list="browsers" name="userperson" /></label>
+        <datalist id="browsers">
+          <option value="Person 1">
+          <option value="Person 2">
+          <option value="Person 3">
+          <option value="Person 4">
+        </datalist><br><br>
+        
+        <lable>Meeting Agenda:</lable>
+        <textarea name="textArea"></textarea><br><br>
+
+      <input type="submit" value="submit">
+    </form><br><br>
+
+    <div class = "employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
+</body>
+<script>
+   
+var selectedRow = null
+
+function onFormSubmit() {
+    if (validate()) {
+        var formData = readFormData();
+        preventDefault();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
+}
+
+function readFormData() {
+    var formData = {};
+    formData["username"] = document.getElementById("username").value;
+    formData["usertime"] = document.getElementById("usertime").value;
+    formData["usercity"] = document.getElementById("usercity").value;
+    formData["usernumber"] = document.getElementById("usernumber").value;
+    formData["userperson"] = document.getElementById("userperson").value;
+    formData["textArea"] = document.getElementById("textArea").value;
+    return formData;
+}
+
+function insertNewRecord(data) {
+    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.username;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.usertime;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.usercity;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = data.usernumber;
+    cell5 = newRow.insertCell(4);
+    cell5.innerHTML = data.userperson;
+    cell6 = newRow.insertCell(5);
+    cell6.innerHTML = data.textArea;
+    cell6 = newRow.insertCell(5);
+    cell6.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+}
+
+function resetForm() {
+    document.getElementById("username").value = "";
+    document.getElementById("usertime").value = "";
+    document.getElementById("usercity").value = "";
+    document.getElementById("usernumber").value = "";
+    document.getElementById("userperson").value = "";
+    document.getElementById("textArea").value = "";
+    selectedRow = null;
+}
+
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("username").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("usertime").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("usercity").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("usernumber").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("userperson").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("textArea").value = selectedRow.cells[5].innerHTML;
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.username;
+    selectedRow.cells[1].innerHTML = formData.usertime;
+    selectedRow.cells[2].innerHTML = formData.usercity;
+    selectedRow.cells[3].innerHTML = formData.usernumber;
+    selectedRow.cells[4].innerHTML = formData.userperson;
+    selectedRow.cells[5].innerHTML = formData.textArea;
+}
+
+function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+function validate() {
+    isValid = true;
+    if (document.getElementById("username").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("usernameValidationError").classList.contains("hide"))
+            document.getElementById("usernameValidationError").classList.add("hide");
+    }
+    return isValid;
+}
+</script>
+
+</html>

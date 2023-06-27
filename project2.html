@@ -10,20 +10,29 @@
 </body>
 
 <script>
- //child class
-class Bike extends Car{
-    //Add some new peoperties and Method as well
-    constructor(color,model,engin){
-        super(color,model);
-        this.engin = engin;
-    }
-        bikeMethod(){
-            console.log("This is bike strat engin method ");
-        }
-}
-let newBike = new Bike("Black",2023,"250cc")
-console.log(newBike);
+ //Chaining Method with Bacnk Account Project
 
-let honda = new Car("red", 2023);
+class bankAccount{
+    constructor(owner,pin){
+        this.owner = owner;
+        this.pin = pin;
+        this.movements=[];
+    }
+    movements(){
+        return this.movements;
+    }
+    deposit(val){
+        this.movements.push(val);
+    }
+    windrawal(val){
+        this.movements.push(-val);
+    }
+}
+//create user
+let account = new bankAccount("Darpan",1234);
+account.deposit(1000)
+account.windrawal(500)
+console.log(account.movements);
+console.log(account);
 </script>
 </html>
