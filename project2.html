@@ -10,29 +10,29 @@
 </body>
 
 <script>
- //Chaining Method with Bacnk Account Project
-
-class bankAccount{
-    constructor(owner,pin){
-        this.owner = owner;
-        this.pin = pin;
-        this.movements=[];
-    }
-    movements(){
-        return this.movements;
-    }
-    deposit(val){
-        this.movements.push(val);
-    }
-    windrawal(val){
-        this.movements.push(-val);
+ //Function
+"use strict"
+let mainPlane={
+    airline : "Fly India",
+    iatacode:"FI",
+    bookings:[],
+    book:function(flightNum,name){
+        console.log(`${name} Booking Flight on ${this.airline} with fight Number ${this.iatacode}${flightNum}`);
+        this.bookings.push({flightName:`${this.airline}`, name:name,flightNumber:flightNum});
     }
 }
-//create user
-let account = new bankAccount("Esha",1234);
-account.deposit(1000)
-account.windrawal(500)
-console.log(account.movements);
-console.log(account);
+
+mainPlane.book(511,"Esha");
+console.log(mainPlane);
+
+let childplane = {
+    airline:"Child Plain",
+    iatacode:"cp",
+    bookings:[],
+}
+
+let book = mainPlane.book;
+
+book.call(childplane,689,"key");
 </script>
 </html>
