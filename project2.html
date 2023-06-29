@@ -10,15 +10,12 @@
 </body>
 
 <script>
- function greet(){
-    console.log(`Hello ${this.firstName} ${this.lastName} on coder`);
-}
-let users={
-    firstName:"Esha",
-    lastName:"Patel"
+ //setTimeout(function)
+
+function greeting(){
+    console.log("Welcome to our coder dost")
 }
 
-let greets = greet.bind(users);
-greets()
+setTimeout(greeting, 5000);
 </script>
 </html>
