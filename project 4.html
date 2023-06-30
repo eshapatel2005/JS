@@ -5,43 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 4</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></link>
+
 </head>
 <style>
-    body{color: #000;overflow-x: hidden;height: 100%;background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHlB7dWS6DZjqt9u8yXwLVAlPAjKMy-XPrQ&usqp=CAU");background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
+    body{
+       color: #000;
+       overflow-x: hidden;
+       height:750px;
+       background-image: url("https://wallpaperaccess.com/full/1409589.jpg");
+       background-repeat: no-repeat;
+       background-size: 100% 100%;
+      
+    }
+
+    .card{
+        padding: 30px 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        border: none !important;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2),
+    }
+    
+    .blue-text{
+        color: #00BCD4;
+    }
+    
+    .form-control-label{
+        margin-bottom: 0;
+        color:#a35b17;
+    }
+    
+    input, textarea, button{
+        padding: 8px 15px;
+        border-radius: 10px !important;
+        margin: 5px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        font-size: 18px !important;
+        font-weight: 300;
+    }
+    
+    input:focus, textarea:focus{
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #9e702e;
+        outline-width: 0;
+        font-weight: 200;
+    }
+    
+    .btn-block{
+        text-transform: uppercase;
+        font-size: 15px !important;
+        font-weight: 400;
+        height: 43px;
+        cursor: pointer;
+        background-color: #a65e20;
+        color:white;
+    }
+    
+    .btn-block:hover{
+        background-color: #944f13;
+    }
+    
+    button:focus{
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0;
+    }
+
+    .datalist option {
+        background: red;
+    }
+
+    .a1{
+        background-color: #de7f2b;
+        border-radius: 20px;
+        text-align: center;
+        color:rgb(72, 51, 6);
+        padding-right: 70px;
+        padding-left: 70px;
+        border-radius: 30px;
+        height: 50px;
+        padding-top: 5px;
+    }
+    td, th {
+    text-align:center;
+    padding: 5px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color:white;
+    color:black;
+   
+}
+
 </style>
+
+
+
+</style>
+
 <body>
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <h3 style="text-align: center;font-size: 45px;color:whitesmoke">Meeting Schedule</h3>
+                <h3 style="text-align: center;font-size: 45px;color:rgb(92, 48, 4);margin-top: 10px;font-weight:bolder;">Meeting Schedule</h3>
                 
                 <div class="card">
                    
-                    <form class="form-card" onsubmit="event.preventDefault()" style="text-align: center;">
+                    <form  class="sign-up-Form" style="text-align: center;">
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname"> </div>
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">City<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="username" name="username"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">City<span class="text-danger"> *</span></label> <input type="text" id="usercity" name="usercity"> </div>
                         </div>
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Phone Number<span class="text-danger"> *</span></label> <input type="text" id="email" name="email"> </div>
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Time<span class="text-danger"> *</span></label> <input type="tel" id="mob" name="mob"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Phone Number<span class="text-danger"> *</span></label> <input type="tel" id="usernumber" name="usernumber"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Time<span class="text-danger"> *</span></label> <input type="time" id="usertime" name="usertime"> </div>
                         </div>
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Choose a person from list<span class="text-danger"> *</span></label> <input type="text" id="job" name="job"> </div>
-                        </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Choose a person from this list:<span class="text-danger"> *</span>
+                                <input list="browsers" name="userperson" id="userperson" style="width:350px;"></label>
+                                <datalist id="browsers">
+                                  <option value="Person 1" >
+                                  <option value="Person 2">
+                                  <option value="Person 3">
+                                  <option value="Person 4">
+                                </datalist>                   
+                            </div>
+                            <div class="row justify-content-between text-left"> 
+                                <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="email" id="useremail" name="useremail" style="width:350px;margin-right: 30px;"> </div>
+                            </div>
+                        </div>    
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Meeting Agenda<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans"> </div>
+                            <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Meeting Agenda<span class="text-danger"> *</span></label> <input type="text" id="textarea" name="textarea"> </div>
                         </div>
                         <div class="row justify-content-end">
-                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Submit</button> </div>
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block" value="submit">SUBMIT</button> </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+        </div><br><br>
+        
+        <div class = "employees-table">
+        <table class="list" id="employeeList" style="margin-left: 2%;">
+            <thead>
+                <tr>
+                    <th><p class="a1" style="padding-top:10px;">Name</p></th>
+                    <th><p class="a1" style="padding-top:10px;">Time</p></th>
+                    <th><p class="a1" style="padding-top:10px;">City</p></th>
+                    <th><p class="a1" style="padding-top:10px;">Number</p></th> 
+                    <th><p class="a1" style="padding-top:10px;">Person</p></th> 
+                    <th><p class="a1" style="padding-top:10px;">Email</p></th> 
+                    <th><p class="a1">Meeting Agenda</p></th> 
+                </tr>
+                <tr>
+                    <th>
+                        <p id="fname"></p>
+                    </th>
+                    <th>
+                        <p id="ftime"></p>
+                    </th>
+                    <th>
+                        <p id="fcity"></p>
+                    </th>
+                    <th>
+                        <p id="fnumber"></p>
+                    </th>
+                    <th>
+                        <p id="fperson"></p>
+                    </th>
+                    <th>
+                        <p id="femail"></p>
+                    </th>
+                    <th>
+                        <p id="ftextarea"></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+        </div>
+        
+   
+   
+
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    
+ let form = document.querySelector('.sign-up-Form');
+
+ form.addEventListener('submit', e=>{
+    e.preventDefault();
+    document.getElementById("fname").innerHTML=form.username.value;
+    document.getElementById("ftime").innerHTML=form.usertime.value;
+    document.getElementById("fcity").innerHTML=form.usercity.value ;
+    document.getElementById("fnumber").innerHTML=form.usernumber.value;
+    document.getElementById("fperson").innerHTML=form.userperson.value;
+    document.getElementById("femail").innerHTML=form.useremail.value;
+    document.getElementById("ftextarea").innerHTML=form.textarea.value;
+ })
+</script>
 </html>
