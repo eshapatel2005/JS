@@ -7,10 +7,13 @@
 </body>
 
 <script>
-//"Modify" The Object property
+  //delete properties in object
+let obj = {
+    prop1 : "value1",
+    prop2 : "value2"
+}
 
-car["color"] = "Grey";
-car.model = "2022";
-console.log(car.color);
+delete obj["prop1"]
+console.log(obj.prop1)
 </script>
 </html>
