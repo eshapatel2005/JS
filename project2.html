@@ -7,13 +7,20 @@
 </body>
 
 <script>
-  //delete properties in object
-let obj = {
-    prop1 : "value1",
-    prop2 : "value2"
-}
+ // Method--> It is nothing but object property(key) holding 
+//Function as "Value"
 
-delete obj["prop1"]
-console.log(obj.prop1)
+let person = {
+    firstName: 'Esha',
+    lastName: 'Patel',
+    City:'Surat',
+    birthyear:2005,
+    Education: 'IT',
+    getSummary: function(){
+        return `${this.firstName} brook lived in ${this.City}.She is ${this.Education} and her birthyear is ${this.birthyear}`;
+    }
+
+}
+console.log(person.getSummary());
 </script>
 </html>
