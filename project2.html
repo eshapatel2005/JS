@@ -7,20 +7,17 @@
 </body>
 
 <script>
- // Method--> It is nothing but object property(key) holding 
-//Function as "Value"
+ //object inside array
 
-let person = {
-    firstName: 'Esha',
-    lastName: 'Patel',
-    City:'Surat',
-    birthyear:2005,
-    Education: 'IT',
-    getSummary: function(){
-        return `${this.firstName} brook lived in ${this.City}.She is ${this.Education} and her birthyear is ${this.birthyear}`;
-    }
+let blocklist = [{userName:"Esha",reson:"Abusive content"},{userName:"Avi",reson:"avoid content"}]; //
+
+console.log(blocklist);
+
+for(let i = 0; i < blocklist.length; i++){
+    console.log(blocklist[i].userName);
+
+
 
 }
-console.log(person.getSummary());
 </script>
 </html>
