@@ -1,11 +1,10 @@
 
-//sum to array in single iteration
+//Array destructuring
 
-var array1 = [1,2,3,4];
-var array2 = [5,6,7,8];
 
-var sum    = [6,8,10,12];
-
-for(var i = 0; i < array1.length; i++){
-  sum.push(array1[i] + array2[i]);
-}
+let arr1 = [1, 2, 3, 4];
+let [first1,second2,third3,fourth4] = arr1;
+console.log(first1); // Outputs 1
+console.log(second2); // Outputs 2
+console.log(third3); // Outputs 3
+console.log(fourth4); // Outputs 4
