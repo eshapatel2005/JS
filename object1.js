@@ -1,9 +1,12 @@
-let a={
-    firstName:"Esha",
-    lastName:"Patel",
-    city:"Surat",
-    fullName:function(){
-        return this.firstName + " " + this.lastName;
+
+//object destructuring
+
+let classDetails = {
+    strength: 78,
+    benches: 39,
+    blackBoard:1
     }
-};
-console.log(a.fullName());
+    let {strength:classStrength, benches:classBenches,blackBoard:classBlackBoard} = classDetails;
+    console.log(classStrength); // Outputs 78
+    console.log(classBenches); // Outputs 39
+    console.log(classBlackBoard); // Outputs 1
