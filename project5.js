@@ -1,11 +1,10 @@
 
 
-//call() method
+//apply() method
 
 
-function sayHello(){
-    return "Hello " + this.name;
+function saySomething(message){
+    return this.name + " is " + message;
     }
-    var obj = {name: "Esha"};
-    sayHello.call(obj);
-    // Returns "Hello Esha
+    var person4 = {name: "Esha"};
+    saySomething.apply(person4, ["awesome"]);
