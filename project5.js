@@ -1,13 +1,11 @@
 
 
-//"this" keyword
+//call() method
 
 
-var obj = {
-    name: "Esha",
-    getName: function(){
-    console.log(this.name);
+function sayHello(){
+    return "Hello " + this.name;
     }
-    }
-    obj.getName();
-    
+    var obj = {name: "Esha"};
+    sayHello.call(obj);
+    // Returns "Hello Esha
