@@ -1,14 +1,13 @@
 
 
-//Triangle pattern
+//Reverse triangle
 
 
 let n = 5; // height of pattern
 let string = "";
 // External loop
 for (let i = 1; i <= n; i++) {
-  // Internal loop
-  for (let j = 1; j <= i; j++) {
+  for (let j = 1; j <= n - i + 1; j++) {
     string += j;
   }
   string += "\n";
