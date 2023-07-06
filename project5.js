@@ -1,19 +1,16 @@
 
 
-// program to count the number of vowels in a string
+//Triangle pattern
 
-function countVowel(str) { 
 
-    // find the count of vowels
-    let count = str.match(/[aeiou]/gi).length;
-
-    // return number of vowels
-    return count;
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += j;
+  }
+  string += "\n";
 }
-
-// take input
-let string = prompt('Enter a string: ');
-
-let result = countVowel(string);
-
-console.log(result);
+console.log(string);
