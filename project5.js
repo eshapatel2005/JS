@@ -1,22 +1,18 @@
 
 
-//Number Pascal Pattern
+//Square Star Pattern
 
 
-let n = 5;
+let n = 5; // row or column count
+// defining an empty string
 let string = "";
-// Pyramid
-for (let i = 1; i <= n; i++) {
-  for (let k = 1; k <= i; k++) {
-    string += k;
+
+for(let i = 0; i < n; i++) { // external loop
+  for(let j = 0; j < n; j++) { // internal loop
+    string += "*";
   }
+  // newline after each row
   string += "\n";
 }
-// Reverse Pyramid
-for (let i = 1; i <= n - 1; i++) {
-  for (let k = 1; k <= n - i; k++) {
-    string += k;
-  }
-  string += "\n";
-}
+// printing the string
 console.log(string);
