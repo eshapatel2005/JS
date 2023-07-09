@@ -1,18 +1,18 @@
 
 
-// Pyramid  starPattern
+// Reversed Pyramid Star Pattern
 
 
 let n = 5;
 let string = "";
 // External loop
-for (let i = 1; i <= n; i++) {
+for (let i = 0; i < n; i++) {
   // printing spaces
-  for (let j = 1; j <= n - i; j++) {
+  for (let j = 0; j < i; j++) {
     string += " ";
   }
   // printing star
-  for (let k = 0; k < 2 * i - 1; k++) {
+  for (let k = 0; k < 2 * (n-i) - 1; k++) {
     string += "*";
   }
   string += "\n";
