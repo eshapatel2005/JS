@@ -1,30 +1,31 @@
 
 
-// Hollow Pyramid Star Pattern
+// Diamond  star Pattern in Javascript
 
 
 let n = 5;
 let string = "";
-
-// External loop
+// Upside pyramid
 for (let i = 1; i <= n; i++) {
   // printing spaces
-  for (let j = 1; j <= n - i; j++) {
+  for (let j = n; j > i; j--) {
     string += " ";
   }
   // printing star
-  for (let k = 0; k < 2 * i - 1; k++) {
-    if(i === 1 || i === n) {
-      string += "*";
-    }
-    else {
-      if(k === 0 || k === 2 * i - 2) {
-        string += "*";
-      }
-      else {
-        string += " ";
-      }
-    }
+  for (let k = 0; k < i * 2 - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+// downside pyramid
+for (let i = 1; i <= n - 1; i++) {
+  // printing spaces
+  for (let j = 0; j < i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = (n - i) * 2 - 1; k > 0; k--) {
+    string += "*";
   }
   string += "\n";
 }
