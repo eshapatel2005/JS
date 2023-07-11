@@ -1,27 +1,39 @@
 
 
-// Left Pascal Star Pattern
+//  Heart Star Pattern
 
 
 
-let n = 5;
-let string = "";
-for (let i = 1; i <= n; i++) {
+var n = 6;
+var str = "";
+for (let i = n / 2; i < n; i += 2) {
+  // print first spaces
+  for (let j = 1; j < n - i; j += 2) {
+    str += " ";
+  }
+  // print first stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  // print second spaces
+  for (let j = 1; j < n - i + 1; j++) {
+    str += " ";
+  }
+  // print second stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  str += "\n";
+}
+// lower part
+// inverted pyramid
+for (let i = n; i > 0; i--) {
   for (let j = 0; j < n - i; j++) {
-    string += " ";
+    str += " ";
   }
-  for (let k = 0; k < i; k++) {
-    string += "*";
+  for (let j = 1; j < i * 2; j++) {
+    str += "*";
   }
-  string += "\n";
+  str += "\n";
 }
-for (let i = 1; i <= n - 1; i++) {
-  for (let j = 0; j < i; j++) {
-    string += " ";
-  }
-  for (let k = 0; k < n - i; k++) {
-    string += "*";
-  }
-  string += "\n";
-}
-console.log(string);
+console.log(str);
