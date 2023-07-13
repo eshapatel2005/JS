@@ -1,25 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .img{
+      width:50px;
+    }
+  </style>
 </head>
 <body>
   
+  
+
+  <div style="margin-left: 10%;margin-right: 10%;">
+    <table style="width:100%;background-color: rgb(58, 54, 54);">
+      <tr>
+        <th style="width:25%;">
+          <img id="myImg" class="img">
+          <p id="nav"></p>
+          <p id="nav1"></p>
+          <p id="nav2"></p>
+          <button id="myBtn"></button>
+        </th>
+
+        <th style="width:25%;">
+          <img id="myImg1" class="img">
+          <p id="nav3"></p>
+          <p id="nav4"></p>
+          <p id="nav5"></p>
+          <button id="myBtn1"></button>
+        </th>
+
+        <th style="width:25%;">
+          <img id="myImg2" class="img">
+          <p id="nav6"></p>
+          <p id="nav7"></p>
+          <p id="nav8"></p>
+          <button id="myBtn2"></button>
+        </th>
+
+        <th style="width:25%;">
+          <img id="myImg3" class="img">
+          <p id="nav9"></p>
+          <p id="nav10"></p>
+          <p id="nav11"></p>
+          <button id="myBtn3"></button>
+        </th>
+      </tr>
+    </table>
+  </div>
 </body>
 
 <script>
-  let a=[1,3,4,5,2];
-  let b=7;
-  for(i=1;i<a.length;i++){
-    let num1 = a[i];
-    for(j=i+1;j<a.length;j++){
-      let num2 = a[j];
-      if(num1+num2==b){
-          console.log(num1);
-          console.log(num2)
-         console.log("Matched");
-      }
-    }
-  }
- 
+
+document.getElementById("myImg").src = "https://cdn.mos.cms.futurecdn.net/2M3i9ccZZvwksJnQdxJ7ia-1200-80.jpg";
+
+document.getElementById("myImg1").src = "https://images.unsplash.com/photo-1527792492728-08d07d011113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&w=1000&q=80";
+
+document.getElementById("myImg2").src = "https://p0.pikist.com/photos/689/719/coding-programming-working-macbook-laptop-technology-office-desk-business-thumbnail.jpg";
+
+document.getElementById("myImg3").src = "https://www.educationnext.org/wp-content/uploads/2020/03/ednext_XVII_4_carter_img01.jpg";
+
+
+myImg.style.width='100%'
+myImg.style.height='400px'
+
+myImg1.style.width='100%'
+myImg1.style.height='400px'
+
+myImg2.style.width='100%'
+myImg2.style.height='400px'
+
+myImg3.style.width='100%'
+myImg3.style.height='400px'
+
+
+document.getElementById("nav").innerHTML="React JS";
+nav.style.color='white'
+
+document.getElementById("nav1").innerHTML="The Compass";
+nav1.style.color='grey'
+
+document.getElementById("nav2").innerHTML="15k Views  . 1 year ago";
+nav2.style.color='grey'
+
+
+document.getElementById("nav3").innerHTML="Angular JS";
+nav3.style.color='white'
+
+document.getElementById("nav4").innerHTML="The Compass";
+nav4.style.color='grey'
+
+document.getElementById("nav5").innerHTML="15k Views  . 2 year ago";
+nav5.style.color='grey'
+
+
+document.getElementById("nav6").innerHTML="Vue JS";
+nav6.style.color='white'
+
+document.getElementById("nav7").innerHTML="The Compass";
+nav7.style.color='grey'
+
+document.getElementById("nav8").innerHTML="15k Views  . 1.5 year ago";
+nav8.style.color='grey'
+
+
+document.getElementById("nav9").innerHTML="Full Stack";
+nav9.style.color='white'
+
+document.getElementById("nav10").innerHTML="The Compass";
+nav10.style.color='grey'
+
+document.getElementById("nav11").innerHTML="15k Views  . 6 month ago";
+nav11.style.color='grey'
+
+document.getElementById("myBtn").innerHTML="React JS";
+myBtn.style.borderRadius='10px'
+myBtn.style.borderColor='yellow'
+myBtn.style.padding='8px'
+myBtn.style.paddingLeft='20px'
+myBtn.style.paddingRight='20px'
+myBtn.style.backgroundColor='black'
+myBtn.style.color='white'
+
+document.getElementById("myBtn1").innerHTML="Angular JS";
+myBtn1.style.borderRadius='10px'
+myBtn1.style.borderColor='yellow'
+myBtn1.style.padding='8px'
+myBtn1.style.paddingLeft='20px'
+myBtn1.style.paddingRight='20px'
+myBtn1.style.backgroundColor='black'
+myBtn1.style.color='white'
+
+document.getElementById("myBtn2").innerHTML="Vue JS";
+myBtn2.style.borderRadius='10px'
+myBtn2.style.borderColor='yellow'
+myBtn2.style.padding='8px'
+myBtn2.style.paddingLeft='20px'
+myBtn2.style.paddingRight='20px'
+myBtn2.style.backgroundColor='black'
+myBtn2.style.color='white'
+
+document.getElementById("myBtn3").innerHTML="Full Stack";
+myBtn3.style.borderRadius='10px'
+myBtn3.style.borderColor='yellow'
+myBtn3.style.padding='8px'
+myBtn3.style.paddingLeft='20px'
+myBtn3.style.paddingRight='20px'
+myBtn3.style.backgroundColor='black'
+myBtn3.style.color='white'
 </script>
-</html> 
+
+</html>
