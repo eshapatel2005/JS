@@ -1,16 +1,18 @@
 
-// program to check leap year
-function checkLeapYear(year) {
 
-  //three conditions to find out the leap year
-  if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
-      console.log(year + ' is a leap year');
-  } else {
-      console.log(year + ' is not a leap year');
-  }
+
+
+// program to generate a multiplication table
+
+// take input from the user
+const number = parseInt(prompt('Enter an integer: '));
+
+//creating a multiplication table
+for(let i = 1; i <= 10; i++) {
+
+    // multiply i with number
+    const result = i * number;
+
+    // display the result
+    console.log(`${number} * ${i} = ${result}`);
 }
-
-// take input
-const year = prompt('Enter a year:');
-
-checkLeapYear(year);

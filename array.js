@@ -1,10 +1,17 @@
+   
 
-//Array destructuring
 
 
-let arr1 = [1, 2, 3, 4];
-let [first1,second2,third3,fourth4] = arr1;
-console.log(first1); // Outputs 1
-console.log(second2); // Outputs 2
-console.log(third3); // Outputs 3
-console.log(fourth4); // Outputs 4
+let num=[1,2,3,4,5,25];  
+let index = num.indexOf(25);
+if(num.indexOf(25) !== -1)  
+{  
+    console.log("Yes, the value exists!")  ;
+    console.log(index)
+
+}   
+else  
+{  
+    console.log("No, the value is absent.") ; 
+}  
+
